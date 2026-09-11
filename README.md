@@ -1,27 +1,41 @@
-# Forty - Jekyll Theme
+# Passenger
 
-A Jekyll version of the "Forty" theme by [HTML5 UP](https://html5up.net/).  
+A narrative website for **Passenger** — the PRS Colonial Placement Division and its one-way voyages aboard the *Hermes* to Proxima Centauri. Built on a heavily customized fork of the ["Forty"](https://html5up.net/forty) Jekyll theme by [HTML5 UP](https://html5up.net/).
 
 ![Forty Theme](assets/images/forty.jpg "Forty Theme")
 
-# How to Use
+## Pages
 
-For those unfamiliar with how Jekyll works, check out [jekyllrb.com](https://jekyllrb.com/) for all the details, 
-or read up on just the basics of [front matter](https://jekyllrb.com/docs/frontmatter/), [writing posts](https://jekyllrb.com/docs/posts/), 
-and [creating pages](https://jekyllrb.com/docs/pages/).
+* **Home** (`index.html`) — landing page, mission teaser, and FAQs
+* **Our Mission** (`mission.html`)
+* **Our Crew** (`crew.html`)
+* **Open Enrollment** (`player-guide.html`)
 
-Simply fork this repository and start editing the `_config.yml` file!
+## Development
 
-> NOTE: GitHub Actions is required to deploy to GitHub Pages because GitHub [refuses to update their version of Jekyll](https://github.com/github/pages-gem/issues/651).
+This is a standard Jekyll site. If you're new to Jekyll, see [jekyllrb.com](https://jekyllrb.com/) for the basics, or dig into [front matter](https://jekyllrb.com/docs/frontmatter/), [writing posts](https://jekyllrb.com/docs/posts/), and [creating pages](https://jekyllrb.com/docs/pages/).
 
-# Added Features
+```bash
+bundle install
+bundle exec jekyll serve
+```
 
-* **[Formspree.io](https://formspree.io/) contact form integration** - just add your email to the `_config.yml` and it works!
-* Use `_config.yml` to **set whether the homepage tiles should pull pages or posts**, as well as how many to display.
-* Add your **social profiles** easily in `_config.yml`. Only social profiles buttons you enter in `config.yml` show up on the site footer!
-* Set **featured images** in front matter.
+Site configuration (title, description, social links, homepage tile behavior) lives in `_config.yml`.
 
-# Credits
+> NOTE: GitHub Actions is required to deploy to GitHub Pages, since GitHub [refuses to update their version of Jekyll](https://github.com/github/pages-gem/issues/651).
+
+## Theme Features
+
+Inherited from the underlying Forty Jekyll theme:
+
+* **[Formspree.io](https://formspree.io/) contact form integration** — add your email to `_config.yml` and it works.
+* `_config.yml` controls whether homepage tiles pull from pages or posts, and how many to display.
+* Social profile links configurable in `_config.yml` — only the ones you fill in show up in the footer.
+* Featured images settable via front matter.
+
+## Credits
+
+Jekyll port and "Forty" theme originally by [andrewbanchich](https://github.com/andrewbanchich/forty-jekyll-theme).
 
 Original README from HTML5 UP:
 
