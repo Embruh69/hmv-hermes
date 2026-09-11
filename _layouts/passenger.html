@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }} — PASSENGER</title>
+<link rel="stylesheet" href="{{ "assets/css/passenger.css" | relative_url }}">
+</head>
+<body>
+
+<header class="site">
+  <div class="bar">
+    <a href="{{ "/" | relative_url }}" class="brand">M.S.V HERMES</a>
+    <span class="nav-line"></span>
+    <a href="{{ "/" | relative_url }}" class="site-logo">
+  <img src="{{ "assets/images/hermes-badge.webp" | relative_url }}" alt="M.S.V Hermes">
+</a>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span>MENU</span>
+      <img src="{{ "assets/images/nav-menu-icon.svg" | relative_url }}" alt="">
+    </button>
+    <nav class="primary">
+      <a href="{{ "/mission.html" | relative_url }}"{% if page.url contains "mission" %} class="current"{% endif %}>Our Mission</a>
+      <a href="{{ "/player-guide.html" | relative_url }}"{% if page.url contains "player-guide" %} class="current"{% endif %}>Open Enrollment</a>
+      <a href="{{ "/crew.html" | relative_url }}"{% if page.url contains "crew" %} class="current"{% endif %}>Our Crew</a>
+    </nav>
+  </div>
+</header>
+
+{{ content }}
+
+<script src="{{ "assets/js/passenger-nav.js" | relative_url }}"></script>
+</body>
+</html>
