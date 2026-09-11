@@ -859,7 +859,7 @@ footer.site p {
 .detail-banner {
   width: 100%;
   max-width: 1280px;
-  height: 340px;
+  height: 460px;
   object-fit: cover;
   object-position: center top;
   border-radius: 4px;
@@ -878,6 +878,11 @@ footer.site p {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.detail-col-left--wide {
+  width: 100%;
+  max-width: 700px;
 }
 
 .detail-title {
@@ -899,6 +904,7 @@ footer.site p {
   letter-spacing: 0.28em;
   margin: 0;
   opacity: 0.85;
+  text-wrap: balance;
 }
 
 .detail-col-right {
@@ -1015,7 +1021,7 @@ footer.site p {
   .card-row .reveal-card:last-child .badge { align-items: flex-start; text-align: left; right: auto; left: 28px; }
   .faq-section { grid-template-columns: 1fr; padding: 64px 24px; }
   .detail-hero { padding: 120px 24px 56px; }
-  .detail-banner { height: 200px; }
+  .detail-banner { height: 260px; }
   .detail-row { flex-direction: column; gap: 40px; }
   .detail-col-left { width: 100%; }
   .crew-grid-v2 { grid-template-columns: 1fr 1fr; }
