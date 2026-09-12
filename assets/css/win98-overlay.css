@@ -56,9 +56,12 @@
 
 #win98-desktop,
 #win98-frame,
-.win98-content-area {
+.win98-content-area,
+#win98-real-content {
   display: contents;
 }
+
+#win98-retro-frame { display: none; }
 
 .win98-chrome { display: none; }
 
@@ -283,33 +286,29 @@ html.win98-active .win98-chrome { display: flex; }
   box-shadow: -1px 0 0 var(--win98-face-lighter);
 }
 
-/* ---------- content area: the real site renders here ---------- */
+/* ---------- content area: the retro site renders here via an iframe ---------- */
 
 html.win98-active .win98-content-area {
   display: block;
   flex: 1 1 auto;
   min-height: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden;
   background: #fff;
   margin: 4px 5px 0;
-  /* transform gives this box a "containing block" of its own, so the
-     site's position:fixed header/nav stay pinned inside the fake
-     browser window instead of the real viewport. */
-  transform: translateZ(0);
   box-shadow:
     inset 1px 1px 0 var(--win98-face-darker),
     inset -1px -1px 0 var(--win98-face-lighter),
     inset 2px 2px 0 var(--win98-face-dark);
 }
 
-.win98-content-area::-webkit-scrollbar { width: 18px; }
-.win98-content-area::-webkit-scrollbar-track { background: var(--win98-face); }
-.win98-content-area::-webkit-scrollbar-thumb {
-  background: var(--win98-face);
-  box-shadow:
-    inset -1px -1px 0 var(--win98-face-darker),
-    inset 1px 1px 0 var(--win98-face-lighter);
+html.win98-active #win98-real-content { display: none; }
+
+html.win98-active #win98-retro-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #fff;
 }
 
 /* ---------- status bar ---------- */
@@ -349,16 +348,6 @@ html.win98-active .win98-content-area {
 }
 
 /* ---------- responsive ---------- */
-
-@media (max-width: 860px) {
-  #win98-toggle {
-    top: auto;
-    bottom: 16px;
-    right: 16px;
-    padding: 7px 12px;
-    font-size: 0.65rem;
-  }
-}
 
 @media (max-width: 720px) {
   html.win98-active #win98-desktop { padding: 6px; }
