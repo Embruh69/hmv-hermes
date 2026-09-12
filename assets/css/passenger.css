@@ -652,7 +652,11 @@ footer.site p {
   transition: filter 0.35s ease, background-size 0.6s ease;
 }
 
-.reveal-card:hover, .reveal-card:focus-visible { filter: saturate(1) brightness(1.5); background-size: 112% auto; }
+.reveal-card:focus-visible { filter: saturate(1) brightness(1.5); background-size: 112% auto; }
+
+@media (hover: hover) and (pointer: fine) {
+  .reveal-card:hover { filter: saturate(1) brightness(1.5); background-size: 112% auto; }
+}
 
 .reveal-card::before {
   /* inset double-border frame, hidden until hover */
@@ -1112,16 +1116,17 @@ footer.site p {
   .detail-nav-row { flex-direction: column; gap: 20px; align-items: flex-start; }
   nav.primary {
     position: fixed;
-    inset: 64px 0 0 0;
+    inset: 0;
     background: var(--void);
     flex-direction: column;
-    padding: 30px 32px;
+    padding: 110px 32px 30px;
     gap: 22px;
     font-size: 1.3rem;
     transform: translateX(100%);
     transition: transform 0.25s ease;
   }
   body.menu-open nav.primary { transform: translateX(0); }
+  body.menu-open { overflow: hidden; }
   .menu-toggle {
     display: flex;
     align-items: center;
