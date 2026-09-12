@@ -6,11 +6,27 @@
    (top-right corner) to switch the effect on and off.
 
    Pair with: assets/css/win98-overlay.css
-   Include this script with `defer` (or right before </body>) AFTER
-   your normal site scripts, e.g.:
+   Retro mode is remembered across page loads (sessionStorage), so
+   clicking a real link to another page while in retro mode keeps that
+   next page in retro mode too, instead of silently reverting to normal.
 
+   INTEGRATION — add to your layout's <head>, as early as possible
+   (before other stylesheets, so the class is set before first paint
+   and there's no flash of the normal page on navigation):
+
+     <script>
+       (function () {
+         try {
+           if (sessionStorage.getItem('win98-retro') === '1') {
+             document.documentElement.classList.add('win98-active');
+           }
+         } catch (e) {}
+       })();
+     </script>
      <link rel="stylesheet" href="{{ "/assets/css/win98-overlay.css" | relative_url }}">
-     ...
+
+   ...and this, right before </body>:
+
      <script src="{{ "/assets/js/win98-overlay.js" | relative_url }}" defer></script>
 
    No other markup changes are required — this script moves the
@@ -19,6 +35,24 @@
 
 (function () {
   'use strict';
+
+  var STORAGE_KEY = 'win98-retro';
+
+  function readStoredState() {
+    try {
+      return sessionStorage.getItem(STORAGE_KEY) === '1';
+    } catch (e) {
+      return false; // storage blocked (privacy mode, etc.) — just default to off
+    }
+  }
+
+  function writeStoredState(active) {
+    try {
+      sessionStorage.setItem(STORAGE_KEY, active ? '1' : '0');
+    } catch (e) {
+      /* ignore */
+    }
+  }
 
   function buildOverlay() {
     if (document.getElementById('win98-desktop')) return;
@@ -157,11 +191,19 @@
       document.documentElement.classList.toggle('win98-active', active);
       toggle.setAttribute('aria-pressed', String(active));
       toggleLabel.textContent = active ? 'Exit Retro' : '1998 Mode';
+      writeStoredState(active);
       if (active) {
         refreshChrome();
         contentArea.scrollTop = 0;
       }
     }
+
+    // Restore retro mode if it was on before this page was loaded — this is
+    // what makes clicking a link to another page (or a real reload) stay in
+    // retro mode instead of silently dropping back to the normal site.
+    // (document.documentElement may already carry the class here if the
+    // early inline snippet in <head> ran first — see integration notes.)
+    setActive(document.documentElement.classList.contains('win98-active') || readStoredState());
 
     toggle.addEventListener('click', function () {
       setActive(!document.documentElement.classList.contains('win98-active'));

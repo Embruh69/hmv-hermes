@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+  (function () {
+    try {
+      if (sessionStorage.getItem('win98-retro') === '1') {
+        document.documentElement.classList.add('win98-active');
+      }
+    } catch (e) {}
+  })();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ page.title }} — PASSENGER</title>
