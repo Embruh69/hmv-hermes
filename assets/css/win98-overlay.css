@@ -350,6 +350,16 @@ html.win98-active .win98-content-area {
 
 /* ---------- responsive ---------- */
 
+@media (max-width: 860px) {
+  #win98-toggle {
+    top: auto;
+    bottom: 16px;
+    right: 16px;
+    padding: 7px 12px;
+    font-size: 0.65rem;
+  }
+}
+
 @media (max-width: 720px) {
   html.win98-active #win98-desktop { padding: 6px; }
   .win98-tool-btn { min-width: 42px; font-size: 9px; }

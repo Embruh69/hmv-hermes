@@ -644,6 +644,7 @@ footer.site p {
   color: #ffffff;
   cursor: pointer;
   background: linear-gradient(var(--overlay-25), var(--overlay-25)), var(--neutral) center/cover no-repeat;
+  background-repeat: no-repeat;
   background-size: 100% auto;      /* zoom in — tune this */
   background-position: center 30%; /* shift focus toward the subjects */
   background-blend-mode: multiply;
@@ -1080,6 +1081,25 @@ footer.site p {
   .hero2 h1 { letter-spacing: 0.08em; gap: 12px; flex-wrap: wrap; }
   .hero2 .sub { max-width: 100%; }
   .reveal-card-inner { padding: 36px 28px; }
+  .reveal-card { background-size: cover; background-position: center; }
+  .mission-band { min-height: 0; }
+  .mission-band .reveal-card-inner {
+    padding: 100px 28px 36px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mission-band .badge {
+    position: static;
+    top: auto;
+    right: auto;
+    transform: none;
+    width: 72px;
+    height: 72px;
+    margin-top: 24px;
+    opacity: 1;
+  }
+  .mission-band.reveal-card:hover .badge,
+  .mission-band.reveal-card:focus-visible .badge { transform: none; }
   .card-row { grid-template-columns: 1fr; }
   .card-row .reveal-card:last-child .reveal-card-inner,
   .card-row .reveal-card:last-child .badge { align-items: flex-start; text-align: left; right: auto; left: 28px; }
@@ -1114,13 +1134,14 @@ footer.site p {
     font-size: 1.2rem;
   }
   .menu-toggle span { display: none; }
-  header.site .bar { padding: 16px 20px; gap: 12px; }
+  header.site .bar { padding: 16px 20px; gap: 12px; justify-content: space-between; }
   .brand {
     font-size: 0.65rem;
     letter-spacing: 0.4em;
     padding: 8px 12px 8px calc(12px + 0.4em);
   }
-  .site-logo img { width: 44px; height: 44px; }
+  .nav-line { display: none; }
+  .site-logo { display: none; }
   .band .wrap { flex-direction: column; align-items: flex-start; }
 }
 
