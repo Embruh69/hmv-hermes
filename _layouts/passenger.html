@@ -31,6 +31,7 @@
 
 {{ content }}
 
+{% if page.url == "/" or page.url == "/index.html" %}
 <footer class="site-footer">
   <div class="wrap">
     <p class="footer-note">PASSENGER — Mothership 1e Campaign. Not affiliated with Tuesday Knight Games.</p>
@@ -40,6 +41,7 @@
     </nav>
   </div>
 </footer>
+{% endif %}
 
 <script src="{{ "assets/js/passenger-nav.js" | relative_url }}"></script>
 </body>

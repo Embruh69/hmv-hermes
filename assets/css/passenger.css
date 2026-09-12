@@ -838,7 +838,7 @@ footer.site p {
   color: #fff;
   padding: 32px;
   background-color: var(--ink);
-  background-image: linear-gradient(var(--overlay-75), var(--overlay-75)), url("../images/footer-bg.png");
+  background-image: linear-gradient(var(--overlay-50), var(--overlay-80)), url("../images/footer-bg.png");
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
   background-size: cover, cover;
