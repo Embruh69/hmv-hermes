@@ -1145,6 +1145,7 @@ footer.site p {
     background: var(--paper);
     border-bottom: 1px solid var(--line);
   }
+  body.menu-open .menu-toggle img { filter: invert(1); }
   .menu-toggle {
     display: flex;
     align-items: center;
