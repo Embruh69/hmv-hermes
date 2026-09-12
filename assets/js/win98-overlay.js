@@ -181,7 +181,7 @@
 
     function refreshChrome() {
       var host = (location.hostname || 'msv-hermes.com').toUpperCase().replace(/^WWW\./, '');
-      addressInputEl.value = 'WWW.' + host;
+      addressInputEl.value = 'WWW.HERMES-MISSION.COM';
       titleTextEl.textContent = (document.title || 'Passenger') + ' - Microsoft Internet Explorer';
     }
     refreshChrome();
