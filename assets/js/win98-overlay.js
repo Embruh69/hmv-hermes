@@ -240,7 +240,7 @@
 
     function refreshChrome() {
       var active = document.documentElement.classList.contains('win98-active');
-      var host = (location.hostname || 'msv-hermes.com').toUpperCase().replace(/^WWW\./, '');
+      var host =  'HERMES-MISSION.COM';
       if (active) {
         var retroPath = computeRetroUrl().replace(/^\.?\/+/, '');
         addressInputEl.value = 'WWW.' + host + '/' + retroPath.toUpperCase();
