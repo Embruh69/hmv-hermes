@@ -82,6 +82,8 @@ header.site .bar {
 }
 
 .brand {
+  position: relative;
+  z-index: 2;
   font-family: 'Chakra Petch', sans-serif;
   font-weight: 700;
   font-size: 0.8rem;
@@ -117,6 +119,8 @@ header.site .bar {
 }
 
 .menu-toggle {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1122,6 +1126,7 @@ footer.site p {
   .detail-nav-row { flex-direction: column; gap: 20px; align-items: flex-start; }
   nav.primary {
     position: fixed;
+    z-index: 1;
     top: 0;
     right: 0;
     bottom: 0;
