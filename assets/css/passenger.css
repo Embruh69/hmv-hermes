@@ -643,19 +643,25 @@ footer.site p {
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
+}
+
+.reveal-card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
   background: linear-gradient(var(--overlay-25), var(--overlay-25)), var(--neutral) center/cover no-repeat;
   background-repeat: no-repeat;
-  background-size: 100% auto;      /* zoom in — tune this */
+  background-size: cover;          /* always fill the card, whatever its height */
   background-position: center 30%; /* shift focus toward the subjects */
   background-blend-mode: multiply;
   filter: saturate(0.85) brightness(1);
-  transition: filter 0.35s ease, background-size 0.6s ease;
+  transition: filter 0.35s ease, transform 0.6s ease;
 }
 
-.reveal-card:focus-visible { filter: saturate(1) brightness(1.5); background-size: 112% auto; }
+.reveal-card:focus-visible .reveal-card-bg { filter: saturate(1) brightness(1.5); transform: scale(1.08); }
 
 @media (hover: hover) and (pointer: fine) {
-  .reveal-card:hover { filter: saturate(1) brightness(1.5); background-size: 112% auto; }
+  .reveal-card:hover .reveal-card-bg { filter: saturate(1) brightness(1.5); transform: scale(1.08); }
 }
 
 .reveal-card::before {
@@ -663,6 +669,7 @@ footer.site p {
   content: '';
   position: absolute;
   inset: 18px;
+  z-index: 2;
   border: 1px solid rgba(255, 255, 255, 0.7);
   opacity: 0;
   transform: scale(0.97);
@@ -1085,7 +1092,6 @@ footer.site p {
   .hero2 h1 { letter-spacing: 0.08em; gap: 12px; flex-wrap: wrap; }
   .hero2 .sub { max-width: 100%; }
   .reveal-card-inner { padding: 36px 28px; }
-  .reveal-card { background-size: cover; background-position: center; }
   .mission-band { min-height: 0; }
   .mission-band .reveal-card-inner {
     padding: 100px 28px 36px;
