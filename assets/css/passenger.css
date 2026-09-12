@@ -648,10 +648,10 @@ footer.site p {
   background-position: center 30%; /* shift focus toward the subjects */
   background-blend-mode: multiply;
   filter: saturate(0.85) brightness(1);
-  transition: filter 0.35s ease;
+  transition: filter 0.35s ease, background-size 0.6s ease;
 }
 
-.reveal-card:hover, .reveal-card:focus-visible { filter: saturate(1) brightness(1.5); }
+.reveal-card:hover, .reveal-card:focus-visible { filter: saturate(1) brightness(1.5); background-size: 112% auto; }
 
 .reveal-card::before {
   /* inset double-border frame, hidden until hover */
