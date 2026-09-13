@@ -1066,8 +1066,9 @@ footer.site p {
    (more headroom/shoulders, less face-fill), so scale them up and
    re-center on the face to match the tighter portraits elsewhere
    in the grid */
-.portrait--louis img { transform: scale(1.55); transform-origin: 50% 20%; }
-.portrait--niall img { transform: scale(1.4); transform-origin: 62% 32%; }
+.portrait--harry img { transform: scale(1.5); transform-origin: 44% 28%; }
+.portrait--louis img { transform: scale(1.75); transform-origin: 50% 18%; }
+.portrait--niall img { transform: scale(1.55); transform-origin: 62% 30%; }
 
 .crew-card-v2 h3 {
   font-family: 'Chakra Petch', sans-serif;
