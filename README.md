@@ -2,7 +2,7 @@
 
 A narrative website for **Passenger** — the PRS Colonial Placement Division and its one-way voyages aboard the *Hermes* to Proxima Centauri. Built on a heavily customized fork of the ["Forty"](https://html5up.net/forty) Jekyll theme by [HTML5 UP](https://html5up.net/).
 
-![Forty Theme](assets/images/forty.jpg "Forty Theme")
+![Jekyll](assets/images/jekyll-logo.png "Jekyll")
 
 ## Pages
 
