@@ -135,7 +135,7 @@ header.site .bar {
   padding: 0;
 }
 
-.menu-toggle img { width: 20px; height: 20px; }
+.menu-toggle i { font-size: 20px; line-height: 1; color: #ffffff; }
 
 nav.primary {
   display: none;
@@ -1178,7 +1178,7 @@ footer.site p {
     background: var(--paper);
     border-bottom: 1px solid var(--line);
   }
-  body.menu-open .menu-toggle img { filter: invert(1); }
+  body.menu-open .menu-toggle i { color: var(--ink); }
   .menu-toggle {
     display: flex;
     align-items: center;
