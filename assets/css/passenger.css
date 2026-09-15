@@ -1109,9 +1109,11 @@ footer.site p {
 }
 .crew-card-v2 p + p { margin-top: 10px; }
 
-/* bio accordion: plain, always-expanded wrapper until the mobile breakpoint
-   takes over below, so desktop looks exactly like un-wrapped paragraphs */
-.crew-bio { display: contents; }
+/* bio accordion: <details open> by default so it always renders expanded;
+   hiding the summary removes the only way to toggle it, so desktop looks
+   exactly like un-wrapped paragraphs. The mobile breakpoint below strips
+   the `open` attribute via JS and restores the summary as a tap target. */
+.crew-bio { display: block; margin: 0; padding: 0; }
 .crew-bio summary { display: none; }
 
 /* ---------- responsive ---------- */
