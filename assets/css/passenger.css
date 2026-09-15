@@ -998,6 +998,7 @@ footer.site p {
   color: rgba(255, 255, 255, 0.88);
   margin: 0;
 }
+.detail-block p + p { margin-top: 14px; }
 
 .detail-nav-row {
   max-width: 1280px;
@@ -1106,6 +1107,7 @@ footer.site p {
   color: rgba(255, 255, 255, 0.75);
   margin: 0;
 }
+.crew-card-v2 p + p { margin-top: 10px; }
 
 /* ---------- responsive ---------- */
 
