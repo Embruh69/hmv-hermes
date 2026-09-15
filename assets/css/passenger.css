@@ -1127,6 +1127,7 @@ footer.site p {
   .grid-2 { grid-template-columns: 1fr; }
   .teaser-row { grid-template-columns: 1fr; padding: 56px 24px; }
   .hero2 { padding: 64px 24px 90px; }
+  .hero2 {padding-top: 6rem;}
   .hero2 .eyebrow { letter-spacing: 0.12em; }
   .hero2 h1 { letter-spacing: 0.08em; gap: 12px; flex-wrap: wrap; }
   .hero2 .sub { max-width: 100%; }
