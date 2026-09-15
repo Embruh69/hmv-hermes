@@ -237,20 +237,40 @@
     // 5. Fill in the title bar / address bar with real page info.
     var titleTextEl = titlebar.querySelector('.win98-title-text');
     var addressInputEl = addressbar.querySelector('.win98-address-input');
+    var HOST = 'HERMES-MISSION.COM';
 
     function refreshChrome() {
       var active = document.documentElement.classList.contains('win98-active');
-      var host =  'HERMES-MISSION.COM';
       if (active) {
         var retroPath = computeRetroUrl().replace(/^\.?\/+/, '');
-        addressInputEl.value = 'WWW.' + host + '/' + retroPath.toUpperCase();
+        addressInputEl.value = 'WWW.' + HOST + '/' + retroPath.toUpperCase();
         titleTextEl.textContent = 'PASSENGER - Microsoft Internet Explorer';
       } else {
-        addressInputEl.value = 'WWW.' + host;
+        addressInputEl.value = 'WWW.' + HOST;
         titleTextEl.textContent = (document.title || 'Passenger') + ' - Microsoft Internet Explorer';
       }
     }
     refreshChrome();
+
+    // Clicking a link inside the retro nav sidebar navigates the iframe
+    // directly (it's a same-origin <a href> to another /retro/*.html page),
+    // which never touches the outer page's URL — so refreshChrome() alone
+    // can't see it. Re-sync the address bar from the iframe's own location
+    // every time it finishes navigating, so it always reflects whichever
+    // retro page is actually showing (mission, crew, player-guide, ...).
+    retroFrame.addEventListener('load', function () {
+      if (!document.documentElement.classList.contains('win98-active')) return;
+      try {
+        var framePath = retroFrame.contentWindow.location.pathname;
+        var file = framePath.split('/').filter(Boolean).pop() || 'index.html';
+        var base = (THIS_SCRIPT && THIS_SCRIPT.dataset.retroBase) || 'retro/';
+        if (base.charAt(base.length - 1) !== '/') base += '/';
+        addressInputEl.value = 'WWW.' + HOST + '/' + (base + file).toUpperCase();
+        retroFrame.dataset.loadedUrl = base + file;
+      } catch (e) {
+        /* cross-origin or detached frame — leave the address bar as-is */
+      }
+    });
 
     // 6. Wire up the toggle + close button + Escape key.
     function setActive(active) {
