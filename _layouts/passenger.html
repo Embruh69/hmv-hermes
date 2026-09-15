@@ -12,13 +12,13 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ page.title }} — PASSENGER</title>
-{% assign social_title = page.title | append: " — PASSENGER" %}
+<title>{{ page.title }} | PASSENGER</title>
+{% assign social_title = page.title | append: " | PASSENGER" %}
 {% assign social_description = page.description | default: site.description %}
 {% assign social_image = page.image | default: site.image | absolute_url %}
 <meta name="description" content="{{ social_description }}">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="PASSENGER — M.S.V Hermes">
+<meta property="og:site_name" content="PASSENGER: M.S.V Hermes">
 <meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:title" content="{{ social_title }}">
 <meta property="og:description" content="{{ social_description }}">
@@ -57,7 +57,7 @@
 {% if page.url == "/" or page.url == "/index.html" %}
 <footer class="site-footer">
   <div class="wrap">
-    <p class="footer-note">PASSENGER — Mothership 1e Campaign. Not affiliated with Tuesday Knight Games.</p>
+    <p class="footer-note">PASSENGER: A Mothership 1e Campaign. Not affiliated with Tuesday Knight Games.</p>
     <nav class="footer-links">
       <a href="#">Privacy Policy</a>
       <a href="#">Terms and Condition</a>
