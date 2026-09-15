@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   github-pages:
@@ -11,4 +11,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: helaili/jekyll-action@2.0.5
-        build_only: true
+        with:
+          build_only: true

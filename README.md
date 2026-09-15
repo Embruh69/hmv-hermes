@@ -20,7 +20,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Site configuration (title, description, social links, homepage tile behavior) lives in `_config.yml`.
+Site configuration (title, homepage tile behavior) lives in `_config.yml`.
 
 > NOTE: GitHub Actions is required to deploy to GitHub Pages, since GitHub [refuses to update their version of Jekyll](https://github.com/github/pages-gem/issues/651).
 
@@ -28,10 +28,10 @@ Site configuration (title, description, social links, homepage tile behavior) li
 
 Inherited from the underlying Forty Jekyll theme:
 
-* **[Formspree.io](https://formspree.io/) contact form integration** — add your email to `_config.yml` and it works.
 * `_config.yml` controls whether homepage tiles pull from pages or posts, and how many to display.
-* Social profile links configurable in `_config.yml` — only the ones you fill in show up in the footer.
 * Featured images settable via front matter.
+
+Note: this fork does not use the original theme's Formspree.io contact form or social-links footer — the application flow is a linked Google Form instead (see `index.html` and `player-guide.html`).
 
 ## Credits
 

@@ -114,8 +114,8 @@ header.site .bar {
 
 .nav-line {
   flex: 1;
-  height: px;
-    background: rgba(255, 255, 255, 0.25);   /* was: var(--line), too dark to see */
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);   /* was: var(--line), too dark to see */
 }
 
 .menu-toggle {
@@ -483,7 +483,7 @@ nav.primary a:hover, nav.primary a.current { background: var(--panel); }
 
 /* ---------- generic content sections ---------- */
 
-.section { padding: 80px 32px; }
+.section { padding: 176px 32px 80px; }
 .section.tight { padding-top: 0; }
 .section h2 { font-size: 2rem; margin-bottom: 20px; }
 .section .lede {
