@@ -1154,7 +1154,8 @@ footer.site p {
   .detail-row { flex-direction: column; gap: 40px; }
   .detail-col-left { width: 100%; }
   .crew-grid-v2 { grid-template-columns: 1fr 1fr; }
-  .detail-nav-row { flex-direction: column; gap: 20px; align-items: flex-start; }
+  .detail-nav-row { flex-wrap: wrap; row-gap: 20px; }
+  .detail-nav-row .nav-next { margin-left: auto; }
   nav.primary {
     position: fixed;
     z-index: 1;
