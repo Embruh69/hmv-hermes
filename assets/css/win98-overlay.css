@@ -25,7 +25,7 @@
 
 #win98-toggle {
   position: fixed;
-  top: 16px;
+  bottom: 16px;
   right: 16px;
   z-index: 100000;
   display: inline-flex;

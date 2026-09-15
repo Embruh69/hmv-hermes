@@ -3,7 +3,7 @@
    ---------------------------------------------------------------
    Wraps the page's existing content in a fake IE6-on-Win98 browser
    window sitting on the Win98 desktop, and adds a toggle button
-   (top-right corner) to switch the effect on and off.
+   (floating, bottom-right corner) to switch the effect on and off.
 
    Pair with: assets/css/win98-overlay.css, assets/css/retro.css, and the
    pages under /retro/ (a full 90s-styled parallel version of the site).
