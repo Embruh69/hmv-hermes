@@ -115,7 +115,7 @@ header.site .bar {
 .nav-line {
   flex: 1;
   height: 1px;
-  background: rgba(255, 255, 255, 0.25);   /* was: var(--line), too dark to see */
+  background: transparent;
 }
 
 .menu-toggle {
