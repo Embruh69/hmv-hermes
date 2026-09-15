@@ -1066,15 +1066,23 @@ footer.site p {
    (more headroom/shoulders, less face-fill), so scale them up and
    re-center on the face to match the tighter portraits elsewhere
    in the grid */
-.portrait--harry img { transform: scale(1.04); transform-origin: 46% 15%; }
-.portrait--louis img { transform: scale(1.4); transform-origin: 50% 18%; }
-.portrait--niall img { transform: scale(1.24); transform-origin: 62% 30%; }
+.portrait--harry img { transform: scale(1); transform-origin: 46% 15%; }
+.portrait--louis img { transform: scale(1); transform-origin: 50% 18%; }
+.portrait--niall img { transform: scale(1.05); transform-origin: 62% 30%; }
 
 .crew-card-v2 h3 {
   font-family: 'Chakra Petch', sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
   margin: 0 0 4px;
+}
+
+.crew-card-v2 .discord-handle {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: #8ea1ff;
+  letter-spacing: 0;
 }
 
 .crew-card-v2 .role {
