@@ -1,7 +1,9 @@
 # site settings
 title: MSV Hermes
 baseurl: "/msv-hermes" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
+url: "https://embruh69.github.io" # the base hostname & protocol for your site
+description: "Earth has given you everything it's going to. Proxima hasn't even started. Board the Hermes for a one-way voyage to a world worth waking up for."
+image: /assets/images/hero-ship.webp
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"

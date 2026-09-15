@@ -13,6 +13,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ page.title }} — PASSENGER</title>
+{% assign social_title = page.title | append: " — PASSENGER" %}
+{% assign social_description = page.description | default: site.description %}
+{% assign social_image = page.image | default: site.image | absolute_url %}
+<meta name="description" content="{{ social_description }}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PASSENGER — M.S.V Hermes">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:title" content="{{ social_title }}">
+<meta property="og:description" content="{{ social_description }}">
+<meta property="og:image" content="{{ social_image }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ social_title }}">
+<meta name="twitter:description" content="{{ social_description }}">
+<meta name="twitter:image" content="{{ social_image }}">
 <link rel="stylesheet" href="{{ "/assets/css/win98-overlay.css" | relative_url }}">
 <link rel="stylesheet" href="{{ "assets/css/passenger.css" | relative_url }}">
 </head>
