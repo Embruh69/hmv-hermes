@@ -1077,6 +1077,12 @@ footer.site p {
   margin: 0 0 4px;
 }
 
+.crew-card-v2 .discord-sep {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .crew-card-v2 .discord-handle {
   font-family: 'Barlow', sans-serif;
   font-weight: 500;
