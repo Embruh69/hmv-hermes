@@ -837,7 +837,7 @@ footer.site p {
   background-size: cover, cover;
   background-attachment: scroll, fixed;
 }
-.footer-cta p { margin: 0 0 36px; }
+.footer-cta p { margin: 0 0 36px; text-wrap: balance; }
 
 .footer-legal {
   position: relative;
@@ -1126,13 +1126,22 @@ footer.site p {
   .tiles { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
   .teaser-row { grid-template-columns: 1fr; padding: 56px 24px; }
-  .hero2 { padding: 64px 24px 90px; }
-  .hero2 {padding-top: 6rem;}
+  .hero2 { padding: 6rem 24px 90px; }
   .hero2 .eyebrow { letter-spacing: 0.12em; }
   .hero2 h1 { letter-spacing: 0.08em; gap: 12px; flex-wrap: wrap; }
   .hero2 .sub { max-width: 100%; }
   .reveal-card-inner { padding: 36px 28px; }
-  .reveal-card-text h2 { flex-wrap: wrap; }
+  .reveal-card-text h2 {
+    display: block;
+    font-size: 1.8rem;
+  }
+  .reveal-card-text h2 img {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
   .mission-band { min-height: 0; }
   .mission-band .reveal-card-inner {
     padding: 100px 28px 36px;
