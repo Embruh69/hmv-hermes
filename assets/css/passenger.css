@@ -1109,6 +1109,11 @@ footer.site p {
 }
 .crew-card-v2 p + p { margin-top: 10px; }
 
+/* bio accordion: plain, always-expanded wrapper until the mobile breakpoint
+   takes over below, so desktop looks exactly like un-wrapped paragraphs */
+.crew-bio { display: contents; }
+.crew-bio summary { display: none; }
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 860px) {
@@ -1191,6 +1196,38 @@ footer.site p {
   .nav-line { display: none; }
   .site-logo { display: none; }
   .band .wrap { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 540px) {
+  .crew-grid-v2 { grid-template-columns: 1fr; }
+
+  .crew-bio {
+    display: block;
+    margin-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 12px;
+  }
+  .crew-bio summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    list-style: none;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .crew-bio summary::-webkit-details-marker { display: none; }
+  .crew-bio summary::after {
+    content: '+';
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: transform 0.2s ease;
+  }
+  .crew-bio[open] summary::after { transform: rotate(45deg); }
+  .crew-bio p { margin-top: 12px; }
+  .crew-bio p + p { margin-top: 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
