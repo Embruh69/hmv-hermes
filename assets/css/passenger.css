@@ -71,7 +71,10 @@ header.site {
   z-index: 20;
   background: transparent;   /* was: var(--paper) */
   border-bottom: none;       /* was: 1px solid var(--line) */
+  transition: transform 0.3s ease;
 }
+
+header.site.nav-hidden { transform: translateY(calc(-100% - 40px)); }
 
 header.site .bar {
   display: flex;
