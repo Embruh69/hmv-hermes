@@ -1131,6 +1131,7 @@ footer.site p {
   .hero2 h1 { letter-spacing: 0.08em; gap: 12px; flex-wrap: wrap; }
   .hero2 .sub { max-width: 100%; }
   .reveal-card-inner { padding: 36px 28px; }
+  .reveal-card-text h2 { flex-wrap: wrap; }
   .mission-band { min-height: 0; }
   .mission-band .reveal-card-inner {
     padding: 100px 28px 36px;
